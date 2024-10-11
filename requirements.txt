@@ -5,7 +5,6 @@ cowsay==6.1
 fade==0.0.9
 fake-useragent==1.5.1
 idna==3.10
-pyjokes==0.8.3
 readkeys==1.0.2
 requests==2.32.3
 termcolor==2.5.0
