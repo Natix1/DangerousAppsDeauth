@@ -22,6 +22,10 @@ And activate
 
 `source ./venv/bin/activate`
 
+now, you can do
+
+`pip install -r requirements.txt`
+
 # Setup guide for Windows
 
 Clone the repository
@@ -42,7 +46,7 @@ And activate
 
 now, you can do
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 to install required libraries
 and tada! youre done with the setup
