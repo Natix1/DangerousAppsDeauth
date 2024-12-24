@@ -5,7 +5,7 @@ I made this tool in a couple of hours to help me deauthorize apps with the "join
 Please open an issue if you enconter any errors, suggestions or other things! Or even if you want to suggest a MOTD.
 (the motd switches to a random pyjoke if not set after a day)
 
-# Setup guide
+# Setup guide for Linux
 Clone the repository:
 
 `git clone https://github.com/Natix1/DangerousAppsDeauth.git`
@@ -14,7 +14,7 @@ Open it:
 
 `cd DangerousAppsDeauth`
 
-Create a virtual environemnt (LINUX)
+Create a virtual environemnt
 
 `python3 -m venv venv`
 
@@ -22,7 +22,17 @@ And activate
 
 `source ./venv/bin/activate`
 
-(WINDOWS)
+# Setup guide for Windows
+
+Clone the repository
+
+`git clone https://github.com/Natix1/DangerousAppsDeauth.git`
+
+Open it:
+
+`cd DangerousAppsDeauth`
+
+Create a virtual environemnt
 
 `python -m venv venv`
 
