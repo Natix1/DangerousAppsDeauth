@@ -5,8 +5,10 @@ from fake_useragent import UserAgent
 import threading
 import time
 from colorama import just_fix_windows_console
+from getpass import getpass
 
 just_fix_windows_console()
+
 from termcolor import cprint, colored
 import os
 import cowsay
@@ -17,9 +19,12 @@ terminal_size = os.get_terminal_size()
 terminal_width = terminal_size.columns
 terminal_height = terminal_size.lines
 
+
+
 PRINT_ALL_APPS = False
 DOTS_PER_SECOND = 5
 TIMEOUT_FOR_APP = 5
+
 global guildsjoin
 guildsjoin = []
 
@@ -34,7 +39,8 @@ def loading(TIMEOUT):
     thread.start()
     return flag, thread
 
-
+# I swear I have to clear this up one day
+# Like fym "loading_notthisone"
 def loading_notthisone(TIMEOUT, flag):
     DOTS_PER_NUMBER = 5
     DOT_INTERVAL = 1 / DOTS_PER_SECOND
@@ -105,7 +111,7 @@ if __name__ == "__main__":
     except requests.exceptions.RequestException as e:
         motd = False
 
-    token = input("Token: ").strip().replace('"', "")
+    token = getpass("Please enter your token: ").strip().replace('"', "")
 
     if not verifyToken(token):
         print("Press any key to exit...", end="", flush=True)
@@ -113,6 +119,7 @@ if __name__ == "__main__":
         print("\nDEUTH exited by user.\n", end="", flush=True)
         exit(1)
 
+    print("If you use stuff like windows clipboard history, now's the time to clear it! Stay safe!")
     print("Fetching apps:")
     flag, thread = loading(TIMEOUT_FOR_APP)
     apps = getApps(token, TIMEOUT_FOR_APP)
